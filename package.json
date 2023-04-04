@@ -1,0 +1,14 @@
+{
+  "name": "chess-clock",
+  "version": "1.0.0",
+  "description": "Chess clock with time options",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "olaruuu03",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.21"
+  }
+}

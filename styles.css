@@ -1,0 +1,162 @@
+:root {
+  --primary: rgb(155, 155, 155);
+  --secondary: rgb(77, 77, 77);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  height: 100vh;
+  width: auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.player {
+  background-color: var(--primary);
+  flex: 5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.player--1 {
+  transform: rotate(180deg);
+}
+
+.clock {
+  margin: 5rem 0 4rem 0;
+  color: var(--secondary);
+}
+
+.clock-type,
+.moves {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.tools {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid var(--secondary);
+  border-top: 2px solid var(--secondary);
+  background-color: rgb(199, 199, 199);
+}
+
+.tools > span {
+  flex: 1;
+  text-align: center;
+  font-size: 60px;
+  color: var(--secondary);
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+.active {
+  background-color: rgb(88, 146, 90);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.active--dot {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.time-out {
+  background-color: rgb(215, 57, 57);
+}
+
+.time-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+  width: auto;
+  background-color: var(--primary);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0rem;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.section-hidden {
+  display: none;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  position: absolute;
+  top: 4rem;
+  color: var(--secondary);
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 15rem;
+  width: 100%;
+}
+
+.list > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 2rem 0 2rem 0;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+  color: var(--secondary);
+  width: 100%;
+}
+.list > div:hover,
+.back {
+  color: black;
+  transition: 1s;
+}
+
+.list > div > span {
+  position: absolute;
+  right: 1rem;
+}
+
+.back {
+  font-weight: 600;
+  font-size: 3rem;
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+@media only screen and (max-width: 780px) {
+  h2 {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+
+  .back {
+    top: 2rem;
+  }
+}

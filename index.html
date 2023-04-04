@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="clock-logo.png" />
+    <title>Chess clock</title>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="player player--1" id="player--0">
+        <div class="moves moves--1">Moves: 0</div>
+        <div class="clock clock--1">10:00</div>
+        <div class="clock-type clock-type--1">10 min</div>
+      </div>
+      <div class="tools">
+        <span class="material-symbols-rounded restart" title="Restart Time">
+          update
+        </span>
+        <span class="material-symbols-rounded pause" title="Pause Timer">
+          timer
+        </span>
+        <span
+          class="material-symbols-rounded time-selector"
+          title="Time Options"
+        >
+          more_time
+        </span>
+      </div>
+      <div class="player player--2" id="player--1">
+        <div class="moves moves--2">Moves: 0</div>
+        <div class="clock clock--2">10:00</div>
+        <div class="clock-type clock-type--2">10 min</div>
+      </div>
+    </div>
+    <div class="time-selection section-hidden">
+      <h2 class="time-title">Set time</h2>
+      <div class="list">
+        <div class="time--list" id="60">1 min</div>
+        <div class="time--list" id="120">2 mins</div>
+        <div class="time--list" id="180">3 mins</div>
+        <div class="time--list" id="240">4 mins</div>
+        <div class="time--list" id="300">5 mins</div>
+        <div class="time--list" id="420">7 mins</div>
+        <div class="time--list" id="600">10 mins</div>
+        <div class="time--list" id="1200">20 mins</div>
+        <div class="time--list" id="1800">30 mins</div>
+        <div class="time--list" id="3600">60 mins</div>
+      </div>
+      <span class="material-symbols-rounded back"> arrow_back_ios </span>
+    </div>
+  </body>
+</html>
