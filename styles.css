@@ -92,6 +92,7 @@ body {
   right: 0rem;
   height: 100vh;
   overflow-x: hidden;
+  transition: 0.5s ease;
 }
 
 .section-hidden {
@@ -148,6 +149,11 @@ h2 {
   left: 2rem;
   cursor: pointer;
   color: var(--secondary);
+}
+
+.inactive {
+  transition: all 0.5s ease;
+  color: rgb(150, 149, 149) !important;
 }
 
 @media only screen and (max-width: 780px) {

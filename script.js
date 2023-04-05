@@ -55,6 +55,8 @@ const restart = function (time = 600) {
   player2.classList.remove('active');
   player1.classList.remove('time-out');
   player2.classList.remove('time-out');
+  pauseTimer.classList.add('inactive');
+  restartTimer.classList.add('inactive');
   clock1.textContent = formatTime(player1Time);
   clock2.textContent = formatTime(player2Time);
   moves1.textContent = moves2.textContent = `Moves: 0`;
@@ -67,6 +69,8 @@ const restart = function (time = 600) {
 restart();
 // Player 1, adding the active class and starting the timer
 const player1Start = function () {
+  pauseTimer.classList.remove('inactive');
+  restartTimer.classList.remove('inactive');
   player1Interval = setInterval(() => {
     // If the time runs out
     if (player1Time <= 1) {
@@ -82,6 +86,8 @@ const player1Start = function () {
 };
 // Player 2, same as above
 const player2Start = function () {
+  pauseTimer.classList.remove('inactive');
+  restartTimer.classList.remove('inactive');
   player2Interval = setInterval(() => {
     if (player2Time <= 1) {
       player2.classList.remove('active');
